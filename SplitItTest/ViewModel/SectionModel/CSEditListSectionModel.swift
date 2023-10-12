@@ -10,13 +10,13 @@ import RxDataSources
 
 struct CSEditListSectionModel {
     var header: String
-    var items: [CSModel]
+    var items: [String]
 }
 
 extension CSEditListSectionModel: SectionModelType {
-    typealias Item = CSModel
+    typealias Item = String
     
-    init(original: CSEditListSectionModel, items: [CSModel]) {
+    init(original: CSEditListSectionModel, items: [String]) {
         self = original
         self.items = items
     }

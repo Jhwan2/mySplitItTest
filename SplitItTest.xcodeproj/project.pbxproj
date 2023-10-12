@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8677BA3C2AD7CB49002BD395 /* CSEditListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8677BA3B2AD7CB49002BD395 /* CSEditListHeader.swift */; };
+		8677BA3E2AD7E47D002BD395 /* testfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8677BA3D2AD7E47D002BD395 /* testfile.swift */; };
+		8677BA412AD80CE5002BD395 /* CSTitleEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8677BA402AD80CE5002BD395 /* CSTitleEditView.swift */; };
+		8677BA432AD80D02002BD395 /* CSTotalPriceEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8677BA422AD80D02002BD395 /* CSTotalPriceEditView.swift */; };
+		8677BA452AD80D29002BD395 /* CSMemberEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8677BA442AD80D29002BD395 /* CSMemberEditView.swift */; };
+		8677BA472AD80D41002BD395 /* CSExclItemEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8677BA462AD80D41002BD395 /* CSExclItemEditView.swift */; };
+		8677BA4C2AD8104E002BD395 /* CSTitleEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8677BA4B2AD8104E002BD395 /* CSTitleEditViewModel.swift */; };
 		86F7324A2AD68D3800F94A99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F732492AD68D3800F94A99 /* AppDelegate.swift */; };
 		86F7324C2AD68D3800F94A99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F7324B2AD68D3800F94A99 /* SceneDelegate.swift */; };
 		86F7324E2AD68D3800F94A99 /* CSEditListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F7324D2AD68D3800F94A99 /* CSEditListView.swift */; };
@@ -28,6 +35,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8677BA3B2AD7CB49002BD395 /* CSEditListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSEditListHeader.swift; sourceTree = "<group>"; };
+		8677BA3D2AD7E47D002BD395 /* testfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testfile.swift; sourceTree = "<group>"; };
+		8677BA402AD80CE5002BD395 /* CSTitleEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSTitleEditView.swift; sourceTree = "<group>"; };
+		8677BA422AD80D02002BD395 /* CSTotalPriceEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSTotalPriceEditView.swift; sourceTree = "<group>"; };
+		8677BA442AD80D29002BD395 /* CSMemberEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSMemberEditView.swift; sourceTree = "<group>"; };
+		8677BA462AD80D41002BD395 /* CSExclItemEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSExclItemEditView.swift; sourceTree = "<group>"; };
+		8677BA4B2AD8104E002BD395 /* CSTitleEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSTitleEditViewModel.swift; sourceTree = "<group>"; };
 		86F732462AD68D3800F94A99 /* SplitItTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitItTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86F732492AD68D3800F94A99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86F7324B2AD68D3800F94A99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +75,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8677BA482AD80FB1002BD395 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				86F732772AD691C100F94A99 /* CSEditListCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8677BA492AD80FC0002BD395 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				8677BA3B2AD7CB49002BD395 /* CSEditListHeader.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		86F7323D2AD68D3800F94A99 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +117,7 @@
 				86F7325D2AD68E9500F94A99 /* Protocols */,
 				86F732492AD68D3800F94A99 /* AppDelegate.swift */,
 				86F7324B2AD68D3800F94A99 /* SceneDelegate.swift */,
+				8677BA3D2AD7E47D002BD395 /* testfile.swift */,
 				86F7324F2AD68D3800F94A99 /* Main.storyboard */,
 				86F732522AD68D3900F94A99 /* Assets.xcassets */,
 				86F732542AD68D3900F94A99 /* LaunchScreen.storyboard */,
@@ -106,8 +137,13 @@
 		86F7326F2AD68EF400F94A99 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8677BA492AD80FC0002BD395 /* Header */,
+				8677BA482AD80FB1002BD395 /* Cell */,
 				86F7324D2AD68D3800F94A99 /* CSEditListView.swift */,
-				86F732772AD691C100F94A99 /* CSEditListCell.swift */,
+				8677BA402AD80CE5002BD395 /* CSTitleEditView.swift */,
+				8677BA422AD80D02002BD395 /* CSTotalPriceEditView.swift */,
+				8677BA442AD80D29002BD395 /* CSMemberEditView.swift */,
+				8677BA462AD80D41002BD395 /* CSExclItemEditView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -117,6 +153,7 @@
 			children = (
 				86F732792AD692BD00F94A99 /* SectionModel */,
 				86F732712AD68F1E00F94A99 /* CSEditListViewModel.swift */,
+				8677BA4B2AD8104E002BD395 /* CSTitleEditViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -229,15 +266,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8677BA472AD80D41002BD395 /* CSExclItemEditView.swift in Sources */,
 				86F7325F2AD68EA600F94A99 /* ViewModelType.swift in Sources */,
 				86F7324E2AD68D3800F94A99 /* CSEditListView.swift in Sources */,
+				8677BA452AD80D29002BD395 /* CSMemberEditView.swift in Sources */,
 				86F732722AD68F1E00F94A99 /* CSEditListViewModel.swift in Sources */,
 				86F732782AD691C100F94A99 /* CSEditListCell.swift in Sources */,
 				86F7324A2AD68D3800F94A99 /* AppDelegate.swift in Sources */,
 				86F7327B2AD692DE00F94A99 /* CSEditListSectionModel.swift in Sources */,
 				86F732752AD6902B00F94A99 /* CSModel.swift in Sources */,
 				86F7327E2AD6C61E00F94A99 /* DataManager.swift in Sources */,
+				8677BA432AD80D02002BD395 /* CSTotalPriceEditView.swift in Sources */,
+				8677BA3C2AD7CB49002BD395 /* CSEditListHeader.swift in Sources */,
+				8677BA412AD80CE5002BD395 /* CSTitleEditView.swift in Sources */,
 				86F7324C2AD68D3800F94A99 /* SceneDelegate.swift in Sources */,
+				8677BA3E2AD7E47D002BD395 /* testfile.swift in Sources */,
+				8677BA4C2AD8104E002BD395 /* CSTitleEditViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

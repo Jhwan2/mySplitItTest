@@ -11,10 +11,11 @@ struct CSModel {
     var title: String
     var totalPrice: Int
     var member: [String]
-    var item: [ExclItem]
+    var items: [ExclItem]
 }
 
 struct ExclItem {
     var itemName: String
-    var exclMember: [Bool]
+    var itemPrice: Int
+    var exclMember: [String]
 }
