@@ -16,38 +16,29 @@ final class CSEditListViewModel: ViewModelType {
     let csCellIdentifier = "CSCell"
     let csHeaderIdentifier = "CSHeader"
     
-    lazy var dataSource: RxCollectionViewSectionedReloadDataSource<CSEditListSectionModel> = {
-       let dataSource = RxCollectionViewSectionedReloadDataSource<CSEditListSectionModel> {
+    lazy var dataSource: RxTableViewSectionedReloadDataSource<CSEditListSectionModel> = {
+       let dataSource = RxTableViewSectionedReloadDataSource<CSEditListSectionModel> {
            (dataSource, collectionView, indexPath, item) in
 //           guard let self = self else { return UICollectionViewCell() }
-           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.csCellIdentifier, for: indexPath) as! CSEditListCell
+           let cell = collectionView.dequeueReusableCell(withIdentifier: self.csCellIdentifier, for: indexPath) as! CSEditListCell
            
            // itemsObservable을 활용하여 셀의 내용 업데이트
            self.itemsObservable
                .map { $0[indexPath.section] }
                .map { $0.exclMember[indexPath.item] }
                .subscribe(onNext: { st in
-                   cell.memberLabel.text = st
+//                   cell.memberLabel.text = st
                })
                .disposed(by: cell.disposeBag) // 셀 내부의 disposeBag 사용
            
            return cell
-       } configureSupplementaryView: { (datasource, collection, kind, indexPath) in
-//           guard let self = self else { return UICollectionReusableView() }
-           let headerView = collection.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: self.csHeaderIdentifier, for: indexPath) as! CSEditListHeader
-           self.itemsObservable
-               .map { item in
-                   let sectionItem = item[indexPath.section]
-                   return "\(sectionItem.itemName) / \(sectionItem.itemPrice)"
-               }
-               .bind(to: headerView.titleLabel.rx.text)
-               .disposed(by: headerView.disposeBag)
-           return headerView
-       }
+       } 
         return dataSource
     }()
     
-    private var data: BehaviorSubject<CSModel>
+    private var data: Observable<CSModel> {
+        return DataManager.shared.data.asObservable()
+    }
     
     var itemsObservable: Observable<[ExclItem]> {
         return data.map { $0.items }
@@ -94,16 +85,6 @@ final class CSEditListViewModel: ViewModelType {
 //            }
         
         return Output(pushTitleEditVC: title, pushPriceEditVC: price, pushMemberEditVC: member, pushExclItemEditVC: exclcell)
-    }
-    
-    
-    init() {
-        let data = DataManager.shared.data
-        self.data = BehaviorSubject(value: data)
-    }
-    
-    func setData(_ newData: CSModel) {
-        data.onNext(newData)
     }
     
 }

@@ -7,8 +7,14 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+import RxCocoa
 
 class CSTotalPriceEditView: UIViewController {
+    
+    let viewModel = CSPriceEditViewModel()
+    
+    var disposeBag = DisposeBag()
     
     let textField: UITextField = {
        let tf = UITextField()
@@ -24,6 +30,7 @@ class CSTotalPriceEditView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        setBinding()
         // Do any additional setup after loading the view.
     }
     
@@ -38,6 +45,22 @@ class CSTotalPriceEditView: UIViewController {
             make.top.equalTo(textField.snp.bottom).offset(10)
             make.height.equalTo(30)
         }
+    }
+    
+    func setBinding() {
+        let input = CSPriceEditViewModel.Input.init(saveBtnTap: saveButton.rx.tap)
+        
+        let output = viewModel.transform(input: input)
+        
+        textField.rx.text.orEmpty
+            .bind(to: viewModel.priceSubject)
+            .disposed(by: disposeBag)
+        
+        output.popNavigator
+            .subscribe(onNext: {
+                self.navigationController?.popViewController(animated: true)
+            })
+            .disposed(by: disposeBag)
     }
     
 

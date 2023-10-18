@@ -14,6 +14,7 @@
 		8677BA452AD80D29002BD395 /* CSMemberEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8677BA442AD80D29002BD395 /* CSMemberEditView.swift */; };
 		8677BA472AD80D41002BD395 /* CSExclItemEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8677BA462AD80D41002BD395 /* CSExclItemEditView.swift */; };
 		8677BA4C2AD8104E002BD395 /* CSTitleEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8677BA4B2AD8104E002BD395 /* CSTitleEditViewModel.swift */; };
+		8677BA4E2ADA79C8002BD395 /* CSPriceEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8677BA4D2ADA79C8002BD395 /* CSPriceEditViewModel.swift */; };
 		86F7324A2AD68D3800F94A99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F732492AD68D3800F94A99 /* AppDelegate.swift */; };
 		86F7324C2AD68D3800F94A99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F7324B2AD68D3800F94A99 /* SceneDelegate.swift */; };
 		86F7324E2AD68D3800F94A99 /* CSEditListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F7324D2AD68D3800F94A99 /* CSEditListView.swift */; };
@@ -42,6 +43,7 @@
 		8677BA442AD80D29002BD395 /* CSMemberEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSMemberEditView.swift; sourceTree = "<group>"; };
 		8677BA462AD80D41002BD395 /* CSExclItemEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSExclItemEditView.swift; sourceTree = "<group>"; };
 		8677BA4B2AD8104E002BD395 /* CSTitleEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSTitleEditViewModel.swift; sourceTree = "<group>"; };
+		8677BA4D2ADA79C8002BD395 /* CSPriceEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSPriceEditViewModel.swift; sourceTree = "<group>"; };
 		86F732462AD68D3800F94A99 /* SplitItTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitItTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86F732492AD68D3800F94A99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86F7324B2AD68D3800F94A99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				86F732792AD692BD00F94A99 /* SectionModel */,
 				86F732712AD68F1E00F94A99 /* CSEditListViewModel.swift */,
 				8677BA4B2AD8104E002BD395 /* CSTitleEditViewModel.swift */,
+				8677BA4D2ADA79C8002BD395 /* CSPriceEditViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			files = (
 				8677BA472AD80D41002BD395 /* CSExclItemEditView.swift in Sources */,
 				86F7325F2AD68EA600F94A99 /* ViewModelType.swift in Sources */,
+				8677BA4E2ADA79C8002BD395 /* CSPriceEditViewModel.swift in Sources */,
 				86F7324E2AD68D3800F94A99 /* CSEditListView.swift in Sources */,
 				8677BA452AD80D29002BD395 /* CSMemberEditView.swift in Sources */,
 				86F732722AD68F1E00F94A99 /* CSEditListViewModel.swift in Sources */,

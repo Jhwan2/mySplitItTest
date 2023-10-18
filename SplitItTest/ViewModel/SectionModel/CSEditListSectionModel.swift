@@ -21,3 +21,19 @@ extension CSEditListSectionModel: SectionModelType {
         self.items = items
     }
 }
+
+struct CSEditListItemSectionModel {
+    var header: String
+    var items: [String]
+}
+
+extension CSEditListItemSectionModel: SectionModelType {
+    typealias Item = String
+    
+    init(original: CSEditListItemSectionModel, items: [String]) {
+        self = original
+        self.items = items
+    }
+}
+
+

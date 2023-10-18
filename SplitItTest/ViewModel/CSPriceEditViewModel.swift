@@ -1,19 +1,19 @@
 //
-//  CSTitleEditViewModel.swift
+//  CSPriceEditViewModel.swift
 //  SplitItTest
 //
-//  Created by 주환 on 2023/10/12.
+//  Created by 주환 on 2023/10/14.
 //
 
 import Foundation
 import RxSwift
 import RxCocoa
 
-final class CSTitleEditViewModel: ViewModelType {
+final class CSPriceEditViewModel: ViewModelType {
     var data = DataManager.shared
     var disposeBag = DisposeBag()
     
-    let titleSubject = BehaviorSubject<String>(value: "")
+    let priceSubject = BehaviorSubject<String>(value: "")
     
     func transform(input: Input) -> Output {
         input.saveBtnTap
@@ -23,8 +23,8 @@ final class CSTitleEditViewModel: ViewModelType {
     }
     
     func saveData() {
-        if let updatedTitle = try? titleSubject.value() {
-            data.titleEdit(title: updatedTitle)
+        if let updatedPrice = try? priceSubject.value() {
+            data.totalPriceEdit(price: updatedPrice)
         }
     }
     

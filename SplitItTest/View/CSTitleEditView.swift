@@ -46,7 +46,13 @@ class CSTitleEditView: UIViewController {
     }
     
     func setBinding() {
-        let output = viewModel.transform(input: .init(saveBtnTap: saveButton.rx.tap, titleChange: textField.rx.text.orEmpty.asObservable()))
+        let input = CSTitleEditViewModel.Input.init(saveBtnTap: saveButton.rx.tap)
+        
+        let output = viewModel.transform(input: input)
+        
+        textField.rx.text.orEmpty
+            .bind(to: viewModel.titleSubject)
+            .disposed(by: disposeBag)
         
         output.popNavigator
             .subscribe(onNext: {
@@ -54,16 +60,5 @@ class CSTitleEditView: UIViewController {
             })
             .disposed(by: disposeBag)
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+
 }
